@@ -5,11 +5,11 @@ import bodyParser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
 
-import router from "./routes/posts.js";
+import postRoutes from "./routes/posts.js";
 
 const app = express();
 
-app.use("/posts", router);
+app.use("/posts", postRoutes);
 
 app.use(cors());
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
